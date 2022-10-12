@@ -336,7 +336,6 @@
 
     #bg-vid {
         transform: translateX(-20px);
-
     }
 
     .main-content,
@@ -401,6 +400,10 @@
     .phone-img,
     .dots {
         display: none;
+    }
+
+    #bg-vid {
+        transform: translateX(-20px);
     }
 
     .logo img {
@@ -498,6 +501,10 @@
     .phone-img,
     .dots {
         display: none;
+    }
+
+    #bg-vid {
+        transform: translateX(-20px);
     }
 
     .logo img {
@@ -603,6 +610,10 @@
 @media (max-width:390px) {
     .social-media-icon {
         display: none;
+    }
+
+    #bg-vid {
+        transform: translateX(-20px);
     }
 }
 
