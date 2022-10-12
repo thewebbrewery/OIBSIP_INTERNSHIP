@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 👇🏻 Background Video Clip 👇🏻 */
+
+#bg-vid {
+    position: fixed;
+    right: 0;
+    left: 20px;
+    bottom: 0;
+    margin: 0;
+    z-index: -1;
+    background-blend-mode: soft-light;
+    opacity: 10%;
+
+}
+
+/* 👇🏻 main-section styles 👇🏻 */
+
+.main-section {
+    position: relative;
+    background: linear-gradient(-90deg, white 98.9%, #3b5998 60%);
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+/* 👇🏻 header-section styles 👇🏻 */
+
+.header-section {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    max-width: 50px;
+    margin-left: 5rem;
+    margin-right: 20px;
+}
+
+.header-section ul {
+    display: flex;
+}
+
+.header-section ul li {
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+.header-section ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2c2d30d0;
+}
+
+.download {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #3b5998;
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px #0c2d73;
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+}
+
+.download-icon {
+    margin-right: 5px;
+    font-size: 1.4rem;
+}
+
+/* 👇🏻 Main Content Section Styles 👇🏻  */
+
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content .description {
+    max-width: 50rem;
+}
+
+.main-content .description h2 {
+    font-size: 6rem;
+    color: #3b5998;
+}
+
+.main-content .description p {
+    font-size: 1.2rem;
+    color: #041a48;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.main-content .description h4 {
+    margin: 30px auto 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #041a48;
+}
+
+.btn {
+    background-color: #3b5998;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin: 5px 20px 5px 0;
+    transition: background-color 0.5s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.btn ion-icon {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+.phone-img img {
+    margin-left: 50px;
+    margin-top: 80px;
+    margin-right: 250px;
+    max-width: 350px;
+    display: none;
+}
+
+.phone-img img.active {
+    display: block;
+}
+
+
+/* *********** Mobile View Iphone slider ************* */
+
+.auto-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auto-slider img {
+    top: 90px;
+    margin: 0;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+    transform: scale(90%);
+    opacity: 0;
+}
+
+.auto-slider {
+    display: none;
+}
+
+
+/* ****************************** */
+
+.dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.dots .dot {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: 30%;
+    display: inline-flex;
+    margin: 8px;
+    border-radius: 50%;
+}
+
+.circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b5998;
+    clip-path: circle(40.625rem at right 31.25rem);
+    z-index: 0;
+}
+
+/* 👇🏻 footer section 👇🏻 */
+
+.social-media-icon {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+}
+
+.social-media-icon li {
+    list-style-type: none;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.social-media-icon li a {
+    font-size: 2.5rem;
+    color: #3b5998;
+}
+
+.social-media-icon li a ion-icon {
+    transition: all 0.3s ease-in-out;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+}
+
+.copyright p {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-size: 1.3rem;
+    color: #3b5998;
+
+}
+
+
+/* 👇🏻********** Other Styles ********** 👇🏻 */
+
+/* 👇🏻 Hover Effects 👇🏻 */
+
+.header-section ul li a:hover {
+    border: 2px solid;
+    border-left: none;
+    border-right: none;
+    border-radius: 2.2px;
+    padding: 5px 0;
+    color: #1c5fdb;
+    transition: color 0.2s ease;
+}
+
+.download:hover,
+.download:focus {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px #0c2d73;
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #1c5fdb;
+    transform: scale(1.05);
+    transition: background-color 0.5s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+/* 👇🏻 Active classes 👇🏻 */
+
+.dots .dot.active {
+    opacity: 100%;
+}
+
+.social-media-icon li a :hover {
+    color: #1c5fdb;
+    transform: translateY(-6px);
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* 👇🏻 Responsive Design Styles 👇🏻 */
+
+/* 👇🏻 Tablet View Styles 👇🏻 */
+
+@media (min-width:878px) and (max-width:1280px) {
+
+    .header-section {
+        padding: 0;
+        padding-right: 25px;
+        margin: 0;
+        justify-content: space-between;
+
+    }
+
+    .logo img {
+        margin: 32px;
+        margin-left: 25px;
+    }
+
+    .main-section {
+        background: linear-gradient(0deg, white 99.5%, #3b5998 50%);
+        padding: 25px;
+        padding-right: 25px;
+        padding-bottom: 0;
+
+    }
+
+    .dots {
+        top: 55%;
+        right: 10px;
+    }
+
+    .dots .dot {
+        background-color: #2192FF;
+        border: 2.5px solid #1c5fdb;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    #bg-vid {
+        transform: translateX(-20px);
+
+    }
+
+    .main-content,
+    .description {
+        transform: translateY(-30px);
+    }
+
+    .main-content,
+    .description p {
+        font-size: 1rem !important;
+    }
+
+    .download {
+        display: none;
+    }
+
+    .phone-img img {
+        margin-right: 45px;
+        transform: scale(0.83);
+    }
+
+    .social-media-icon {
+        transform: translateY(-100px);
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #3b5998;
+        padding: 5px;
+    }
+
+    .copyright p {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        font-size: 1.2rem;
+        color: #fff;
+
+    }
+
+}
+
+/* 👇🏻 Mobile View Styles 👇🏻 */
+
+@media (min-width:624px) and (max-width:877px) {
+
+    .body {
+        height: 1000px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle,
+    .download,
+    .phone-img,
+    .dots {
+        display: none;
+    }
+
+    .logo img {
+        margin: 30px;
+        margin-left: 15px;
+    }
+
+    .header-section {
+        margin: 0;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .auto-slider {
+        display: flex;
+    }
+
+    .auto-slider img.first {
+        opacity: 1;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .description {
+        word-wrap: break-word;
+        position: absolute;
+        margin-top: 2rem;
+        top: 75%;
+    }
+
+    .main-content .description h2 {
+        font-size: 4.5rem;
+        margin: auto auto 20px;
+    }
+
+    .main-content .description p {
+        line-height: 1.6;
+    }
+
+    .main-content .description h4 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .main-section {
+        text-align: center;
+        background: linear-gradient(0deg, white 99.9%, #3b5998 60%);
+    }
+
+    .btn {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 15px 32%;
+    }
+
+
+    .social-media-icon {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        bottom: -35%;
+        transform: translateX(-50%);
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: -42%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #3b5998;
+        padding: 5px;
+    }
+
+    .copyright p {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}
+
+/* 👇🏻 Small Mobile View 👇🏻 */
+
+@media (max-width:628px) {
+
+    .circle,
+    .download,
+    .phone-img,
+    .dots {
+        display: none;
+    }
+
+    .logo img {
+        margin: 30px;
+        margin-left: 15px;
+    }
+
+    .header-section {
+        margin: 0;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .auto-slider {
+        display: flex;
+    }
+
+    .auto-slider img {
+        top: 80px;
+        margin-left: 55%;
+        margin-bottom: 0;
+        transform: scale(0.75);
+    }
+
+    .auto-slider img.first {
+        opacity: 1;
+    }
+
+    .description {
+        text-align: center;
+        word-wrap: break-word;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: -22%;
+        top: 70%;
+    }
+
+    .main-content .description h2 {
+        transform: translateY(70px);
+        margin-top: 0;
+        font-size: 4.5rem;
+        margin: auto auto 20px;
+    }
+
+    .main-content .description p {
+        transform: translateY(50px);
+        line-height: 1.6;
+        font-size: 1rem;
+        margin: auto 50px;
+    }
+
+    .main-content .description h4 {
+        transform: translateY(50px);
+        word-wrap: break-word;
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .main-section {
+        scroll-behavior: smooth;
+        background: linear-gradient(0deg, white 99.5%, #3b5998 60%);
+    }
+
+    .btn {
+        transform: translateY(50px);
+        text-align: center;
+        margin-left: 10px;
+    }
+
+
+    .social-media-icon {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        bottom: -40%;
+        transform: translateX(-50%);
+    }
+
+
+    .copyright {
+        transform: translateY(50px);
+        position: absolute;
+        bottom: -40%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #3b5998;
+        padding: 5px;
+    }
+
+    .copyright p {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}
+
+/* 👇🏻 320px Width Mobile Phones 👇🏻 */
+
+@media (max-width:390px) {
+    .social-media-icon {
+        display: none;
+    }
+}
+
+
+
+/* 👉🏻 It can be enhanced more that is going to take more time 😊 */
